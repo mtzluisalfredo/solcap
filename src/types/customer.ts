@@ -1,0 +1,154 @@
+export type TypeformStep =
+  | 'TARGET'
+  | 'PERSONAL_INFORMATION'
+  | 'ACTIVITY'
+  | 'BANK_ACCOUNT'
+  | 'RISK'
+  | 'FILES';
+
+export type IdentityDocumentType = 'GOVERNMENT_ID' | 'PASSPORT';
+
+export type Customer = {
+  id?: number;
+  uuid: string;
+  cognitoId: string;
+
+  isOnboarded: boolean;
+
+  firstName: string;
+  lastName: string;
+  email: string;
+
+  type?: 'INDIVIDUAL' | 'ENTITY';
+
+  kycCompleted: boolean;
+  kycFilesUploaded: boolean;
+  kycStatus?: string;
+
+  docType?: string;
+
+  typeformStep?: TypeformStep;
+
+  legalStatus?: string;
+  financialActivity?: string;
+  financialCurrency?: string;
+  companyAddressCountry?: string;
+  companyAddressCity?: string;
+  companyAddressState?: string;
+  companyAddressZipCode?: string;
+  companyName?: string;
+  companyLegalStatus?: string;
+  companyPartner?: boolean;
+  phoneNumber?: string;
+  homeAddress?: string;
+  homeAddressCountry?: string;
+  homeAddressCity?: string;
+  homeAddressState?: string;
+  homeAddressZipCode?: string;
+  birthAddressCountry?: string;
+  birthAddressCity?: string;
+  birthAddressState?: string;
+  birthAddressZipCode?: string;
+  financialIndustry?: string;
+  financialOccupation?: string;
+  financialEmployer?: string;
+  financialTaxIdentification?: string;
+  financialTaxCountry?: string;
+  financialTaxState?: string;
+  birthDate?: string;
+  financialObjective?: string;
+  financialPurpose?: string;
+  financialEstimatedPurchaseVolume?: string;
+  beneficiary?: string;
+  bankIbanAccountNumber?: string;
+  beneficiaryAddress?: string;
+  bankSwiftRoutingNumber?: string;
+  bankPhone?: string;
+  bankAddress?: string;
+  bankAddressCountry?: string;
+  bankAddressCity?: string;
+  bankAddressState?: string;
+  bankAddressZipCode?: string;
+  bankName?: string;
+  bankAccountNumber?: string;
+  bankRoutingNumber?: string;
+  bankIban?: string;
+  bankSwift?: string;
+  bankAccountHolder?: string;
+  bankCurrency?: string;
+  bankIntermediaryAddress?: string;
+  bankIntermediaryAddressCountry?: string;
+  bankIntermediaryAddressCity?: string;
+  bankIntermediaryAddressState?: string;
+  bankIntermediaryAddressZipCode?: string;
+  bankIntermediaryName?: string;
+  bankIntermediaryAccountNumber?: string;
+  bankIntermediaryRoutingNumber?: string;
+  bankIntermediaryIban?: string;
+  bankIntermediarySwift?: string;
+  bankIntermediaryAccountHolder?: string;
+  bankIntermediaryCurrency?: string;
+  financialMainIncomeSource?: string;
+  financialOtherIncomeSource?: string;
+  financialIncomeInformation?: string;
+  financialAnnualIncome?: string;
+  domesticOutgoingWireFee?: string;
+  referenceNumber?: string;
+  pepType?: string;
+  pepInstitution?: string;
+  pepCountry?: string;
+  pepPosition?: string;
+  pepStartDate?: string;
+  pepEndDate?: string;
+  pepJustification?: string;
+  pepFamiliarType?: string;
+  pepFamiliarInstitution?: string;
+  pepFamiliarCountry?: string;
+  pepFamiliarPosition?: string;
+  pepFamiliarStartDate?: string;
+  pepFamiliarEndDate?: string;
+  pepFamiliarJustification?: string;
+  pepFamiliarName?: string;
+  pepFamiliarRelation?: string;
+  pepCollaboratorType?: string;
+  pepCollaboratorInstitution?: string;
+  pepCollaboratorCountry?: string;
+  pepCollaboratorPosition?: string;
+  pepCollaboratorStartDate?: string;
+  pepCollaboratorEndDate?: string;
+  pepCollaboratorJustification?: string;
+  pepCollaboratorName?: string;
+  pepCollaboratorRelation?: string;
+  authorizedName?: string;
+  authorizedPhone?: string;
+  authorizedIdentification?: string;
+  authorizedPassportName?: string;
+  authorizedPassportStatus?: string;
+  authorizedPassportDescription?: string;
+  personalAddressProofName?: string;
+  personalAddressProofStatus?: string;
+  personalAddressProofDescription?: string;
+  companyIsMexican?: string;
+  companyParticipationPercentage?: string;
+  companyTitle?: string;
+  companyBankStatementDocumentName?: string;
+  companyBankStatementDocumentStatus?: string;
+  companyBankStatementDocumentDescription?: string;
+  companyConstitutiveActName?: string;
+  companyConstitutiveActStatus?: string;
+  companyConstitutiveActDescription?: string;
+  companyAddressProofName?: string;
+  companyAddressProofStatus?: string;
+  companyAddressProofDescription?: string;
+  companyPowerLegalRepresentativeName?: string;
+  companyPowerLegalRepresentativeStatus?: string;
+  companyPowerLegalRepresentativeDescription?: string;
+  personalBankStatementDocumentName?: string;
+  personalBankStatementDocumentStatus?: string;
+  personalBankStatementDocumentDescription?: string;
+  personalLegalDocumentDataName?: string;
+  personalLegalDocumentDataStatus?: string;
+  personalLegalDocumentDataDescription?: string;
+  identityDocumentType?: IdentityDocumentType;
+  bankIntermediaryIbanAccountNumber?: string;
+};
